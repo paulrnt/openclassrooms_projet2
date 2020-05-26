@@ -1,0 +1,310 @@
+/*-------------------- structure doc --------------------*/
+body
+{
+    font-family:  'Trebuchet MS', Arial, sans-serif;
+    max-width: 1190px;
+    min-height: 100vh;
+    width: auto;
+    margin: auto;
+    /*border*/
+    box-shadow: 0px 4px 4px #1c1a19;
+    overflow-wrap: break-word;
+}
+
+
+header, main, footer, #photo, #identite, .description, .date, aside, #loisirs, #icones, #contactpro 
+{
+    display: flex;   
+}
+
+/*-------------------- header --------------------*/
+
+#photo
+{
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+#photo img
+{
+    margin: auto;
+    width:300px;
+    clip-path: circle(30%);
+}
+
+#identite
+{
+    justify-content: center;
+}
+
+#identite h1 
+{
+    margin: 0;
+    font-size: 3rem;
+}
+
+.prenom 
+{
+    color: #999999;
+    text-transform: uppercase;
+}
+
+.nom 
+{
+    text-transform: uppercase;
+    font-weight: lighter;
+}
+
+#identite h2 
+{
+    font-size: 1.3rem;
+}
+
+#identite h2 span 
+{
+    border-bottom: solid #999999 1px;
+}
+
+/* MAIN - CONTENU + FOOTER - RECOMMANDATIONS(.titre_contenu)*/
+
+.principale 
+{
+    width: 70%;
+    flex-direction: column;
+    padding: 0 30px 0 60px;
+    box-sizing: border-box;
+}
+
+.titre_contenu 
+{
+    padding-bottom: 10px;
+    border-bottom: solid #999999 2px;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+.titre_contenu i 
+{
+    padding-right: 15px;
+    color: #999999;
+}
+
+
+.description 
+{
+    justify-content: space-between;
+    padding: 0 0 20px 0; 
+    align-items: baseline;
+}
+
+.date 
+{
+	align-items: baseline;
+}
+
+.date i 
+{
+    padding-right: 15px;
+    color: #37474F;
+}
+
+.date p
+{
+    color: #37474F;
+}
+
+
+.details 
+{
+    flex-direction: column;
+    width: 70%;
+    text-align: justify;
+}
+
+.etablissement 
+{
+    font-weight: bold;
+    color: #37474F;
+    text-transform: uppercase;
+}
+
+/* MAIN - ASIDE + FOOTER - LOISIRS - RECOMMANDATIONS */
+
+aside 
+{
+    flex-direction: column;
+}
+
+.presentation 
+{
+    width: 30%;
+    background-color: #CCCCCC;
+}
+
+.presentation h2 
+{
+    text-align: center;
+    background-color: #37474F;
+    line-height: 2em;
+    color: #CCCCCC;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+}
+
+.presentation p 
+{
+    text-align: justify;
+    margin: 0;
+    padding: 0 40px 20px 40px;
+
+}
+
+
+/* loisirs - icones */
+
+#loisirs 
+{
+    flex-direction: column;
+    text-align: center;
+}
+
+#loisirs h2
+{
+    margin-top: 50px;
+}
+
+#icones 
+{
+    justify-content: space-around;
+}
+
+#icones span
+{
+    border: solid #37474F 1.5px;
+    border-radius: 50%;
+    padding: 8px 8px 8px 8px;
+}
+
+/* contact */
+
+/* a modifier pour le commit */
+#contactpro
+{
+    width: 80%;
+    justify-content: space-between;
+}
+/* */
+
+#contactpro li
+{
+	list-style-type: none
+}
+
+.coordonnees span
+{
+	font-weight: bold;
+}
+
+
+/*MEDIA QUERIES*/
+@media screen and (max-width: 900px) 
+{
+	/*STRUCTURE*/  
+    header, main 
+    {
+        flex-direction: column;
+    }
+    
+    aside, footer 
+    {
+        flex-direction: column-reverse;
+    }
+
+     .description, #contactpro 
+    {
+        flex-direction: column;
+    }
+
+	#photo, #identite, .presentation, .principale, .details
+    {
+        width: 100%;
+    }
+	
+	.principale
+	{
+		padding: 0 5px 0 5px;
+	}
+
+
+	/*photo + titre*/    
+    #identite h1
+    {
+        font-size:2em;
+        text-align: center;
+        margin-top: 20px;
+       
+    }
+
+     #identite h2
+    {
+        font-size:1em;
+        text-align: center;
+        margin-bottom: 30px;
+         
+    }
+
+    /*apropos + contact*/ 
+	.presentation p 
+	{
+	    padding: 0 5px 20px 5px;
+	}
+   
+	/*contenu principal - titre*/ 	
+	.titre_contenu
+	{
+		font-size: 1.5em;
+		text-align: center;
+	}
+
+	/*contenu principal - date*/
+
+	.date
+    {
+    	height: 40px;
+       	background-color: #CCCCCC;
+       	width: 100%;
+       	align-items: center;
+    }
+
+	.date p
+    {
+    	font-style: italic;
+    	margin: 0 0 0 5px;
+    }
+
+	
+	.description i
+    {
+    	display: none;
+    }
+
+	/*contenu principal - paragraphe*/
+
+	.etablissement
+	{
+		text-align: left;
+	}
+
+	/*footer - loisirs*/
+
+	#loisirs h2
+	{
+    margin-top: 16px;
+	}
+
+	#icones
+	{
+		margin-bottom: 20px;
+	}
+}
+
